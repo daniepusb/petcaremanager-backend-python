@@ -23,4 +23,4 @@ COPY .env /app/.env
 EXPOSE ${PYTHON_PORT}
 
 # Run your application
-CMD uvicorn app.app.main:app --host 0.0.0.0 --port ${PORT:-10000} --reload
+CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-10000} --reload
