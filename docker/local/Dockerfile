@@ -16,11 +16,11 @@ COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
 # Copy the contents of the Django project into the container
-COPY app/ /app/
+COPY ../../app /app/app
 COPY .env /app/.env
 
 # Expose the port your app runs on
 EXPOSE ${PYTHON_PORT}
 
 # Run your application
-CMD uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-10000} --reload
+CMD uvicorn app.app.main:app --host 0.0.0.0 --port ${PORT:-10000} --reload
