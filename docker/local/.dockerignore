@@ -10,6 +10,8 @@ venv/
 *.egg-info/
 .venv/
 pip-wheel-metadata/
+.env
+.git/
 
 # IDE and editor files
 .vscode/
@@ -36,6 +38,7 @@ dist/
 *.egg
 
 # Docker-related
+docker/local/
 Dockerfile*
 docker-compose*.yml
 
